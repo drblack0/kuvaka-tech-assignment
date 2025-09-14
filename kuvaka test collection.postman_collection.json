@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "d9727fb8-e905-42be-b7d8-e1d84c0c1fdf",
+		"name": "kuvaka test collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48416967",
+		"_collection_link": "https://kartik03012-6233287.postman.co/workspace/Kartik-Saxena's-Workspace~9cee1393-80c6-474c-8aef-eeb5d4c02d47/collection/48416967-d9727fb8-e905-42be-b7d8-e1d84c0c1fdf?action=share&source=collection_link&creator=48416967"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"another kartik 2\",\r\n    \"mobile\": \"909090901\",\r\n    \"password\": \"secretKey2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kuvaka-tech-assignment-gl42.onrender.com/auth/signup",
+					"protocol": "https",
+					"host": [
+						"kuvaka-tech-assignment-gl42",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"another kartik 2\",\r\n    \"mobile\": \"909090901\",\r\n    \"password\": \"secretKey2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kuvaka-tech-assignment-gl42.onrender.com/auth/send-otp",
+					"protocol": "https",
+					"host": [
+						"kuvaka-tech-assignment-gl42",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"auth",
+						"send-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify-otp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzJlNGNkNy01Nzc2LTQ4NzQtYTJhNS0yYjQwM2ExNDE2MjIiLCJpYXQiOjE3NTc4NDU1MzMsImV4cCI6MTc1ODQ1MDMzM30.JEeDsEyUAGdqC6pOlQyUFMXisxz9M5oTMXvqd12-JOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile\": \"909090901\",\r\n    \"otp\": \"2950\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kuvaka-tech-assignment-gl42.onrender.com/auth/verify-otp",
+					"protocol": "https",
+					"host": [
+						"kuvaka-tech-assignment-gl42",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"auth",
+						"verify-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chatroom",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzJlNGNkNy01Nzc2LTQ4NzQtYTJhNS0yYjQwM2ExNDE2MjIiLCJpYXQiOjE3NTc4NDU1MzMsImV4cCI6MTc1ODQ1MDMzM30.JEeDsEyUAGdqC6pOlQyUFMXisxz9M5oTMXvqd12-JOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"new chatroom\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kuvaka-tech-assignment-gl42.onrender.com/chatroom",
+					"protocol": "https",
+					"host": [
+						"kuvaka-tech-assignment-gl42",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"chatroom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chatroom",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzJlNGNkNy01Nzc2LTQ4NzQtYTJhNS0yYjQwM2ExNDE2MjIiLCJpYXQiOjE3NTc4NDU1MzMsImV4cCI6MTc1ODQ1MDMzM30.JEeDsEyUAGdqC6pOlQyUFMXisxz9M5oTMXvqd12-JOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kuvaka-tech-assignment-gl42.onrender.com/chatroom",
+					"protocol": "https",
+					"host": [
+						"kuvaka-tech-assignment-gl42",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"chatroom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chatroom/id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzJlNGNkNy01Nzc2LTQ4NzQtYTJhNS0yYjQwM2ExNDE2MjIiLCJpYXQiOjE3NTc4NDU1MzMsImV4cCI6MTc1ODQ1MDMzM30.JEeDsEyUAGdqC6pOlQyUFMXisxz9M5oTMXvqd12-JOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kuvaka-tech-assignment-gl42.onrender.com/chatroom/b68d69cf-2794-4f35-b078-1c39f82deaeb",
+					"protocol": "https",
+					"host": [
+						"kuvaka-tech-assignment-gl42",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"chatroom",
+						"b68d69cf-2794-4f35-b078-1c39f82deaeb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chatroom/id/message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzJlNGNkNy01Nzc2LTQ4NzQtYTJhNS0yYjQwM2ExNDE2MjIiLCJpYXQiOjE3NTc4NDU1MzMsImV4cCI6MTc1ODQ1MDMzM30.JEeDsEyUAGdqC6pOlQyUFMXisxz9M5oTMXvqd12-JOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"hi how are you?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kuvaka-tech-assignment-gl42.onrender.com/chatroom/b68d69cf-2794-4f35-b078-1c39f82deaeb/message",
+					"protocol": "https",
+					"host": [
+						"kuvaka-tech-assignment-gl42",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"chatroom",
+						"b68d69cf-2794-4f35-b078-1c39f82deaeb",
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscription/status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzJlNGNkNy01Nzc2LTQ4NzQtYTJhNS0yYjQwM2ExNDE2MjIiLCJpYXQiOjE3NTc4NDU1MzMsImV4cCI6MTc1ODQ1MDMzM30.JEeDsEyUAGdqC6pOlQyUFMXisxz9M5oTMXvqd12-JOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"hi how are you?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kuvaka-tech-assignment-gl42.onrender.com/subscription/status",
+					"protocol": "https",
+					"host": [
+						"kuvaka-tech-assignment-gl42",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"subscription",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscription/pro",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlYzJlNGNkNy01Nzc2LTQ4NzQtYTJhNS0yYjQwM2ExNDE2MjIiLCJpYXQiOjE3NTc4NDU1MzMsImV4cCI6MTc1ODQ1MDMzM30.JEeDsEyUAGdqC6pOlQyUFMXisxz9M5oTMXvqd12-JOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile\": \"909090901\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kuvaka-tech-assignment-gl42.onrender.com/subscription/pro",
+					"protocol": "https",
+					"host": [
+						"kuvaka-tech-assignment-gl42",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"subscription",
+						"pro"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
