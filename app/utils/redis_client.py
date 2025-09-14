@@ -1,4 +1,8 @@
 import redis
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class RedisClient:
@@ -6,6 +10,10 @@ class RedisClient:
 
     def __new__(cls):
         if cls._instance is None:
-            cls._instance = redis.Redis(host="localhost", port=6379, db=0)
+            # Read host and port from environment variables
+            redis_host = os.environ.get("REDIS_HOST", "localhost")
+            redis_port = int(os.environ.get("REDIS_PORT", 6379))
+            cls._instance = redis.Redis(
+                host=redis_host, port=redis_port, db=0, decode_responses=True
+            )
         return cls._instance
-
