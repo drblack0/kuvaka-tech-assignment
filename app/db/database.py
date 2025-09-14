@@ -1,5 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Singleton variables
 _engine = None
@@ -9,7 +13,7 @@ _Session = None
 def get_engine():
     global _engine
     if _engine is None:
-        DATABASE_URL = "postgresql+psycopg2://postgres:0000@localhost:5432/postgres"
+        DATABASE_URL = os.environ.get("SQLALCHEMY_DATABASE_URI")
         _engine = create_engine(DATABASE_URL, pool_pre_ping=True, future=True)
     return _engine
 
