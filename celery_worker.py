@@ -1,4 +1,5 @@
 import os
+from readline import backend
 from celery import Celery
 from flask import Flask
 from dotenv import load_dotenv
@@ -20,8 +21,8 @@ def create_flask_app():
 
 rabbit_url = os.environ.get("RABBIT_URL")
 gemini_api_key = os.environ.get("GEMINI_API_KEY")
-
-celery_app = Celery("tasks", broker=rabbit_url)
+redis_url = os.environ.get("REDIS_URL")
+celery_app = Celery("tasks", broker=redis_url, backend=redis_url)
 
 client = genai.Client(api_key=gemini_api_key)
 
