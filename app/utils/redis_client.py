@@ -16,9 +16,7 @@ class RedisClient:
             redis_url = os.environ.get("REDIS_URL")
 
             if not redis_url:
-                cls._instance = redis.Redis(
-                    host=redis_host, port=redis_port, db=0, decode_responses=True
-                )
+                cls._instance = redis.Redis(host=redis_host, port=redis_port, db=0)
             else:
-                cls._instance = redis.from_url(redis_url, decode_responses=True)
+                cls._instance = redis.from_url(redis_url)
         return cls._instance
